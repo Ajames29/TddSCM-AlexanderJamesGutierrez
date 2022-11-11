@@ -3,6 +3,7 @@ package com.example.FinalTestTDDDay3;
 import com.example.FinalTestTDDDay3.Employee.Employee;
 import com.example.FinalTestTDDDay3.EmployeeRepository.EmployeeRepo;
 import com.example.FinalTestTDDDay3.EmployeeService.EmployeeService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -25,13 +26,20 @@ public class EmployeeServiceTest {
     @InjectMocks
     private EmployeeService employeeService;
 
-
+//    Employee JohnMicheal;
+//    Employee JohnRaven;
+//    Employee Alexa;
+//@BeforeEach
+//        void setup(){
+//
+//}
     @Test
     @DisplayName("Given employees from repository with the setup above " +
             "WHEN getAllEmployeesThatAreEarningMoreThan is executed with input 90000 " +
             "THEN result should return  JohnMicheal and Alexa ")
     public void testEmployeesEarningsMoreThanAmaount(){
         //Arrange
+
         Employee JohnMicheal = new Employee(1L, "JohnMicheal", 23, 150000d, "Senior Software Engineer");
         Employee JohnRaven = new Employee(2L, "JohnRaven", 22, 20000d, "Manager Coffee");
         Employee Alexa = new Employee(3L, "Alexa", 30, 100000d, "Senior Software Engineer");

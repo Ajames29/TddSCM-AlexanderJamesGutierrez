@@ -47,8 +47,8 @@ public class EmployeeRepoTest {
         Employee JohnMicheal = new Employee(1L, "JohnMicheal", 23, 150000d, "Senior Software Engineer");
         Employee JohnRaven = new Employee(2L, "JohnRaven", 22, 20000d, "Manager Coffee");
         Employee Alexa = new Employee(3L, "Alexa", 30, 100000d, "Senior Software Engineer");
-        List<Employee> employees = List.of(JohnMicheal
-                , JohnRaven, Alexa);
+        List<Employee> employees = employeeRepo.saveAll(Arrays.asList(JohnMicheal
+                , JohnRaven, Alexa));
 
         //Act
         Optional<Employee> result = employeeRepo.findById(1L);
